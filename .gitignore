@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Datasets
+ Audio_Song_Actors_01-24/
+ Audio_Speech_Actors_01-24/
+ 
 # C extensions
 *.so
 
