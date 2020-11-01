@@ -1,4 +1,4 @@
-# Utility script to convert .wav files to be mono channel and audio rate of 16000Hz.
+# Utility script to convert .wav files from RAVDESS to be mono channel and audio rate of 16000Hz.
 
 import os
 import argparse
@@ -23,7 +23,6 @@ def convert_audios(path, target_path, remove=False):
         for filename in filenames:
             file = os.path.join(dirpath, filename)
             if file.endswith(".wav"):
-                # it is a wav file
                 target_file = file.replace(path, target_path)
                 convert_audio(file, target_file, remove=remove)
 

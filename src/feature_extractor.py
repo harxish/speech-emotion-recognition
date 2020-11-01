@@ -1,3 +1,5 @@
+# Get features from audio clips so that we can use that to train our ML Algo.
+
 import os
 import librosa
 import soundfile
