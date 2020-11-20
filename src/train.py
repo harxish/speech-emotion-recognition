@@ -1,3 +1,5 @@
+# Train the ML model and store it as a pickle file.
+
 import os
 import pickle
 
@@ -7,11 +9,10 @@ from sklearn.neural_network import MLPClassifier
 from feature_extractor import load_data
 
 
-X_train, X_test, y_train, y_test = load_data(test_size=0.25)
+X_train, X_test, y_train, y_test = load_data(test_size=0.15)
 print("[+] Number of training samples:", X_train.shape[0])
 print("[+] Number of testing samples:", X_test.shape[0])
 print("[+] Number of features:", X_train.shape[1])
-print("[+] Number of classes:", y_train)
 
 model_params = {
     'alpha': 0.01,
@@ -31,3 +32,5 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_true=y_test, y_pred=y_pred)
 
 print("Accuracy: {:.2f}%".format(accuracy*100))
+
+pickle.dump(model, open('emotion-recognition.model', 'wb'))

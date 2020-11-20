@@ -6,7 +6,8 @@ __pycache__/
 # Datasets
 Audio_Song_Actors_01-24/
 Audio_Speech_Actors_01-24/
-dataset/
+dataset*/
+*.wav
  
 # C extensions
 *.so
